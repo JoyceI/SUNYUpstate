@@ -1,0 +1,7 @@
+c:\Users\admin\documents\visual studio 2013\Projects\Module1\OracleQuery\bin\Debug\OracleQuery.exe.config
+c:\Users\admin\documents\visual studio 2013\Projects\Module1\OracleQuery\bin\Debug\OracleQuery.exe
+c:\Users\admin\documents\visual studio 2013\Projects\Module1\OracleQuery\bin\Debug\OracleQuery.pdb
+c:\Users\admin\documents\visual studio 2013\Projects\Module1\OracleQuery\bin\Debug\Oracle.ManagedDataAccess.dll
+c:\Users\admin\documents\visual studio 2013\Projects\Module1\OracleQuery\obj\Debug\OracleQuery.csprojResolveAssemblyReference.cache
+c:\Users\admin\documents\visual studio 2013\Projects\Module1\OracleQuery\obj\Debug\OracleQuery.exe
+c:\Users\admin\documents\visual studio 2013\Projects\Module1\OracleQuery\obj\Debug\OracleQuery.pdb

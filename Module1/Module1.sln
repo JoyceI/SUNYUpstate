@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module1", "Module1\Module1.csproj", "{A9ADD2B1-EF9D-4FA6-B579-C34B058C3E01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OracleQuery", "OracleQuery\OracleQuery.csproj", "{54EBB020-7548-405D-8348-F4CF3136C5AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9ADD2B1-EF9D-4FA6-B579-C34B058C3E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9ADD2B1-EF9D-4FA6-B579-C34B058C3E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9ADD2B1-EF9D-4FA6-B579-C34B058C3E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9ADD2B1-EF9D-4FA6-B579-C34B058C3E01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54EBB020-7548-405D-8348-F4CF3136C5AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54EBB020-7548-405D-8348-F4CF3136C5AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54EBB020-7548-405D-8348-F4CF3136C5AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54EBB020-7548-405D-8348-F4CF3136C5AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

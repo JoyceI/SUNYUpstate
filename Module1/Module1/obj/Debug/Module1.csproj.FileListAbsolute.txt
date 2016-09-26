@@ -1,0 +1,8 @@
+c:\users\admin\documents\visual studio 2013\Projects\Module1\Module1\bin\Debug\WinSCP.exe
+c:\users\admin\documents\visual studio 2013\Projects\Module1\Module1\bin\Debug\Module1.exe.config
+c:\users\admin\documents\visual studio 2013\Projects\Module1\Module1\bin\Debug\Module1.exe
+c:\users\admin\documents\visual studio 2013\Projects\Module1\Module1\bin\Debug\Module1.pdb
+c:\users\admin\documents\visual studio 2013\Projects\Module1\Module1\bin\Debug\WinSCPnet.dll
+c:\users\admin\documents\visual studio 2013\Projects\Module1\Module1\obj\Debug\Module1.csprojResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2013\Projects\Module1\Module1\obj\Debug\Module1.exe
+c:\users\admin\documents\visual studio 2013\Projects\Module1\Module1\obj\Debug\Module1.pdb
