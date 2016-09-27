@@ -17,6 +17,14 @@ namespace AbcConstruction
             Window[] houseWindows = {   new Window(70, 25), 
                                         new Window(90, 25), 
                                         new Window(50, 25) };
+            for (int i = 0; i < 200; i++)
+            {
+                foreach (var item in houseWindows)
+                {
+                    item.Open();
+                    item.Close();
+                }
+            }
             
 
 

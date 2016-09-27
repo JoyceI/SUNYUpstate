@@ -36,8 +36,11 @@ namespace AbcConstruction
             Random r = new Random();
             if (r.Next(100) == 50)
             {
+                Console.WriteLine("Window Broken");
                 OnBroken("hinge", 50);
             }
+            else
+            { Console.WriteLine("Window Open"); }
         }
         public void Close() { }
 
