@@ -12,7 +12,7 @@ namespace OracleQuery
         static void Main(string[] args)
         {
             OracleConnection conn =
-                new OracleConnection("Data Source=XE;User Id=hr;Password=oracle12;");
+                new OracleConnection("Data Source=XE;User Id=hr;Password=oracle;");
             conn.Open();
             OracleCommand cmd =
                 new OracleCommand("Select * from Employees", conn);
@@ -21,7 +21,7 @@ namespace OracleQuery
             {
                 Console.WriteLine("{0} {1} : {2} ",
                     dr["First_Name"],
-                    dr["LastName"],
+                    dr["Last_Name"],
                     dr["Email"]
                     );
             }
