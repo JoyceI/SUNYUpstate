@@ -35,7 +35,7 @@ namespace AbcConstruction
         {
             Random r = new Random();
             if (r.Next(100) < 50)
-            {
+            { //Demostrate Sync
                 Console.WriteLine("Window Broken");
                 //if (OnBroken != null) { OnBroken("hinge", 50); }
                 try
