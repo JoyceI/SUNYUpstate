@@ -37,7 +37,16 @@ namespace AbcConstruction
             if (r.Next(100) < 50)
             {
                 Console.WriteLine("Window Broken");
-                OnBroken("hinge", 50);
+                //if (OnBroken != null) { OnBroken("hinge", 50); }
+                try
+                {
+                    OnBroken("hinge", 50);
+                }
+                catch (NullReferenceException e)
+                {
+                    Console.WriteLine("so sad, I'm broke inside");
+                }
+                
             }
             else
             { Console.WriteLine("Window Open"); }
