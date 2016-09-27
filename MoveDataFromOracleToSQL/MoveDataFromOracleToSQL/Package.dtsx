@@ -1,0 +1,1190 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/27/2016 3:54:39 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DEV"
+  DTS:CreatorName="dev\admin"
+  DTS:DTSID="{438E98A0-E644-4E25-B8DF-6D70F9ADEC75}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="12.0.2430.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{25F6D455-8990-412B-94C6-D85A5F42FDC0}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{314415CA-19E8-4A2F-B09A-C0BCFB39D7A6}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=c:\Lab\Emp.xls;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{5E6B33CE-1337-40EB-9BD1-8247AFEC2656}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="c:\Lab\Emp.cvs">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EMPLOYEE_ID"
+              DTS:DTSID="{6AAFA9F9-08D0-427D-808A-ACE36999D476}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FIRST_NAME"
+              DTS:DTSID="{0FFAE17E-EFCF-481D-A0CC-087CDC3C06D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LAST_NAME"
+              DTS:DTSID="{559518B9-C5FC-4177-AE88-52CFB7541FDB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EMAIL"
+              DTS:DTSID="{47B86119-9A58-48CF-9FDF-916E6FD2B997}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PHONE_NUMBER"
+              DTS:DTSID="{8AB9FE6C-361C-43C7-96E7-C73BCED940B2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HIRE_DATE"
+              DTS:DTSID="{D9DD9F89-1D3E-488B-A14B-074B664434B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="JOB_ID"
+              DTS:DTSID="{07339383-CCCE-46D7-BA3B-A2D2E8E8B67B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SALARY"
+              DTS:DTSID="{DC2685FA-E224-4097-A540-98AAAECA35E7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COMMISSION_PCT"
+              DTS:DTSID="{C725FAB9-F31F-4CDB-94D6-B74276E28E09}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MANAGER_ID"
+              DTS:DTSID="{B5FB8173-7864-4625-AC7D-4336A243899B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DEPARTMENT_ID"
+              DTS:DTSID="{11378785-2DA7-4C20-A47D-186427087A75}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Localhost.msdb]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{8E75C568-EDFC-44D5-8EB6-89096DC0BAAC}"
+      DTS:ObjectName="Localhost.msdb">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=Localhost;Initial Catalog=msdb;Integrated Security=True;Application Name=SSIS-Package-{8E75C568-EDFC-44D5-8EB6-89096DC0BAAC}Localhost.msdb;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SMTP Connection Manager]"
+      DTS:CreationName="SMTP"
+      DTS:DTSID="{0A81F346-16DF-4714-98E6-31669D393A25}"
+      DTS:ObjectName="SMTP Connection Manager">
+      <DTS:ObjectData>
+        <SmtpConnectionManager
+          ConnectionString="SmtpServer=mail.google.com;UseWindowsAuthentication=False;EnableSsl=True;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[XE.HR]"
+      DTS:CreationName="ADO.NET:Oracle.ManagedDataAccess.Client.OracleConnection, Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342"
+      DTS:DTSID="{115B619D-C21E-4493-9813-2B16D1D65CA7}"
+      DTS:ObjectName="XE.HR">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="DATA SOURCE=XE;USER ID=HR;">
+          <DTS:Password
+            DTS:Name="PASSWORD"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6LTg5kYg9EODf+umHrOtTAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAEgbH+LrvYVJLjnfAoy7SafccfezP7UpRtcRS5g4bZlgAAAAAOgAAAAAIAACAAAABT+kwRLkoIAMHwsrP/+ZCDbv036kZFC1UuquxDhEzjDBAAAADdQJlSU6r2C0dAqtyXB2E6QAAAALyOiGulpT+RHP4zH3RYTj3tsYIenr8WZKpdWNJmqQgBYVKyvk1ezGkcqm4ePEDdMB5TNyyC8+AD4+YruQJWi3w</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{4CC2B07C-1A26-4512-A998-E5A6B00FF7BD}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8E75C568-EDFC-44D5-8EB6-89096DC0BAAC}"
+          SQLTask:SqlStatementSource="truncate table OracleEmp" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get Data From oracle to sql"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{3B74BCE8-64F9-4E61-BF4A-AAC593DAB659}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get Data From oracle to sql"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Get Data From oracle to sql\ADO NET Destination"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="ADO NET Destination"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"OracleEmp"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Get Data From oracle to sql\ADO NET Destination.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Localhost.msdb]"
+                  connectionManagerRefId="Package.ConnectionManagers[Localhost.msdb]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[EMPLOYEE_ID]"
+                      cachedDataType="i4"
+                      cachedName="EMPLOYEE_ID"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[EMPLOYEE_ID]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[EMPLOYEE_ID]" />
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[FIRST_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="FIRST_NAME"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[FIRST_NAME]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[FIRST_NAME]" />
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[LAST_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="LAST_NAME"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[LAST_NAME]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[LAST_NAME]" />
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[EMAIL]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="EMAIL"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[EMAIL]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[EMAIL]" />
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[PHONE_NUMBER]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="PHONE_NUMBER"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[PHONE_NUMBER]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[PHONE_NUMBER]" />
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[HIRE_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="HIRE_DATE"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[HIRE_DATE]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[HIRE_DATE]" />
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[JOB_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="JOB_ID"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[JOB_ID]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[JOB_ID]" />
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[SALARY]"
+                      cachedDataType="r8"
+                      cachedName="SALARY"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[SALARY]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[SALARY]" />
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[COMMISSION_PCT]"
+                      cachedDataType="r4"
+                      cachedName="COMMISSION_PCT"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[COMMISSION_PCT]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[COMMISSION_PCT]" />
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[MANAGER_ID]"
+                      cachedDataType="i4"
+                      cachedName="MANAGER_ID"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[MANAGER_ID]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[MANAGER_ID]" />
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[DEPARTMENT_ID]"
+                      cachedDataType="i2"
+                      cachedName="DEPARTMENT_ID"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[DEPARTMENT_ID]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[DEPARTMENT_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[EMPLOYEE_ID]"
+                      dataType="i4"
+                      name="EMPLOYEE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[FIRST_NAME]"
+                      dataType="wstr"
+                      length="20"
+                      name="FIRST_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[LAST_NAME]"
+                      dataType="wstr"
+                      length="25"
+                      name="LAST_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[EMAIL]"
+                      dataType="wstr"
+                      length="25"
+                      name="EMAIL" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[PHONE_NUMBER]"
+                      dataType="wstr"
+                      length="20"
+                      name="PHONE_NUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[HIRE_DATE]"
+                      dataType="dbTimeStamp"
+                      name="HIRE_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[JOB_ID]"
+                      dataType="wstr"
+                      length="10"
+                      name="JOB_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[SALARY]"
+                      dataType="r8"
+                      name="SALARY" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[COMMISSION_PCT]"
+                      dataType="r4"
+                      name="COMMISSION_PCT" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[MANAGER_ID]"
+                      dataType="i4"
+                      name="MANAGER_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[DEPARTMENT_ID]"
+                      dataType="i2"
+                      name="DEPARTMENT_ID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Get Data From oracle to sql\ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Get Data From oracle to sql\ADO NET Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="ADO NET Source"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">Select * from HR.Employees</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Get Data From oracle to sql\ADO NET Source.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[XE.HR]"
+                  connectionManagerRefId="Package.ConnectionManagers[XE.HR]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[EMPLOYEE_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[EMPLOYEE_ID]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[EMPLOYEE_ID]"
+                      name="EMPLOYEE_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[FIRST_NAME]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[FIRST_NAME]"
+                      length="20"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[FIRST_NAME]"
+                      name="FIRST_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[LAST_NAME]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LAST_NAME]"
+                      length="25"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[LAST_NAME]"
+                      name="LAST_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[EMAIL]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[EMAIL]"
+                      length="25"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[EMAIL]"
+                      name="EMAIL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[PHONE_NUMBER]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[PHONE_NUMBER]"
+                      length="20"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[PHONE_NUMBER]"
+                      name="PHONE_NUMBER"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[HIRE_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[HIRE_DATE]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[HIRE_DATE]"
+                      name="HIRE_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[JOB_ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[JOB_ID]"
+                      length="10"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[JOB_ID]"
+                      name="JOB_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[SALARY]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[SALARY]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[SALARY]"
+                      name="SALARY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[COMMISSION_PCT]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[COMMISSION_PCT]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[COMMISSION_PCT]"
+                      name="COMMISSION_PCT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[MANAGER_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[MANAGER_ID]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[MANAGER_ID]"
+                      name="MANAGER_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[DEPARTMENT_ID]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DEPARTMENT_ID]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[DEPARTMENT_ID]"
+                      name="DEPARTMENT_ID"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[EMPLOYEE_ID]"
+                      dataType="i4"
+                      name="EMPLOYEE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[FIRST_NAME]"
+                      dataType="wstr"
+                      length="20"
+                      name="FIRST_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LAST_NAME]"
+                      dataType="wstr"
+                      length="25"
+                      name="LAST_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[EMAIL]"
+                      dataType="wstr"
+                      length="25"
+                      name="EMAIL" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[PHONE_NUMBER]"
+                      dataType="wstr"
+                      length="20"
+                      name="PHONE_NUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[HIRE_DATE]"
+                      dataType="dbTimeStamp"
+                      name="HIRE_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[JOB_ID]"
+                      dataType="wstr"
+                      length="10"
+                      name="JOB_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[SALARY]"
+                      dataType="r8"
+                      name="SALARY" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[COMMISSION_PCT]"
+                      dataType="r4"
+                      name="COMMISSION_PCT" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[MANAGER_ID]"
+                      dataType="i4"
+                      name="MANAGER_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DEPARTMENT_ID]"
+                      dataType="i2"
+                      name="DEPARTMENT_ID" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[EMPLOYEE_ID]"
+                      dataType="i4"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[EMPLOYEE_ID]"
+                      name="EMPLOYEE_ID" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[FIRST_NAME]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[FIRST_NAME]"
+                      name="FIRST_NAME" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LAST_NAME]"
+                      dataType="wstr"
+                      length="25"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LAST_NAME]"
+                      name="LAST_NAME" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[EMAIL]"
+                      dataType="wstr"
+                      length="25"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[EMAIL]"
+                      name="EMAIL" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[PHONE_NUMBER]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[PHONE_NUMBER]"
+                      name="PHONE_NUMBER" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[HIRE_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[HIRE_DATE]"
+                      name="HIRE_DATE" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[JOB_ID]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[JOB_ID]"
+                      name="JOB_ID" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[SALARY]"
+                      dataType="r8"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[SALARY]"
+                      name="SALARY" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[COMMISSION_PCT]"
+                      dataType="r4"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[COMMISSION_PCT]"
+                      name="COMMISSION_PCT" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[MANAGER_ID]"
+                      dataType="i4"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[MANAGER_ID]"
+                      name="MANAGER_ID" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DEPARTMENT_ID]"
+                      dataType="i2"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DEPARTMENT_ID]"
+                      name="DEPARTMENT_ID" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Get Data From oracle to sql\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Flat File Destination">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Get Data From oracle to sql\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].Columns[EMPLOYEE_ID]"
+                      cachedDataType="i4"
+                      cachedName="EMPLOYEE_ID"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EMPLOYEE_ID]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[EMPLOYEE_ID]" />
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].Columns[FIRST_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="FIRST_NAME"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FIRST_NAME]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[FIRST_NAME]" />
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].Columns[LAST_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="LAST_NAME"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[LAST_NAME]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[LAST_NAME]" />
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].Columns[EMAIL]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="EMAIL"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EMAIL]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[EMAIL]" />
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].Columns[PHONE_NUMBER]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="PHONE_NUMBER"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PHONE_NUMBER]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[PHONE_NUMBER]" />
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].Columns[HIRE_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="HIRE_DATE"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[HIRE_DATE]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[HIRE_DATE]" />
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].Columns[JOB_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="JOB_ID"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[JOB_ID]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[JOB_ID]" />
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].Columns[SALARY]"
+                      cachedDataType="r8"
+                      cachedName="SALARY"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SALARY]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[SALARY]" />
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].Columns[COMMISSION_PCT]"
+                      cachedDataType="r4"
+                      cachedName="COMMISSION_PCT"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[COMMISSION_PCT]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[COMMISSION_PCT]" />
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].Columns[MANAGER_ID]"
+                      cachedDataType="i4"
+                      cachedName="MANAGER_ID"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[MANAGER_ID]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[MANAGER_ID]" />
+                    <inputColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].Columns[DEPARTMENT_ID]"
+                      cachedDataType="i2"
+                      cachedName="DEPARTMENT_ID"
+                      externalMetadataColumnId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DEPARTMENT_ID]"
+                      lineageId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output].Columns[DEPARTMENT_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EMPLOYEE_ID]"
+                      dataType="i4"
+                      name="EMPLOYEE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FIRST_NAME]"
+                      dataType="wstr"
+                      length="20"
+                      name="FIRST_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[LAST_NAME]"
+                      dataType="wstr"
+                      length="25"
+                      name="LAST_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EMAIL]"
+                      dataType="wstr"
+                      length="25"
+                      name="EMAIL" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PHONE_NUMBER]"
+                      dataType="wstr"
+                      length="20"
+                      name="PHONE_NUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[HIRE_DATE]"
+                      dataType="dbTimeStamp"
+                      name="HIRE_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[JOB_ID]"
+                      dataType="wstr"
+                      length="10"
+                      name="JOB_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SALARY]"
+                      dataType="r8"
+                      name="SALARY" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[COMMISSION_PCT]"
+                      dataType="r4"
+                      name="COMMISSION_PCT" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[MANAGER_ID]"
+                      dataType="i4"
+                      name="MANAGER_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DEPARTMENT_ID]"
+                      dataType="i2"
+                      name="DEPARTMENT_ID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Get Data From oracle to sql\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\Get Data From oracle to sql\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Get Data From oracle to sql\Multicast.Outputs[Multicast Output 2]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 2"
+                  synchronousInputId="Package\Get Data From oracle to sql\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Get Data From oracle to sql\Multicast.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\Get Data From oracle to sql\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Get Data From oracle to sql\Multicast.Outputs[Multicast Output 3]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 3"
+                  synchronousInputId="Package\Get Data From oracle to sql\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Get Data From oracle to sql.Paths[ADO NET Source Output]"
+              endId="Package\Get Data From oracle to sql\Multicast.Inputs[Multicast Input 1]"
+              name="ADO NET Source Output"
+              startId="Package\Get Data From oracle to sql\ADO NET Source.Outputs[ADO NET Source Output]" />
+            <path
+              refId="Package\Get Data From oracle to sql.Paths[Multicast Output 1]"
+              endId="Package\Get Data From oracle to sql\ADO NET Destination.Inputs[ADO NET Destination Input]"
+              name="Multicast Output 1"
+              startId="Package\Get Data From oracle to sql\Multicast.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\Get Data From oracle to sql.Paths[Multicast Output 2]"
+              endId="Package\Get Data From oracle to sql\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Multicast Output 2"
+              startId="Package\Get Data From oracle to sql\Multicast.Outputs[Multicast Output 2]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get Data From SQL to Oracle"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{26D148ED-C979-49F2-9187-14BAC04E7B13}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get Data From SQL to Oracle"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{66F4A435-23BE-447C-BABF-D439082BF047}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Get Data From oracle to sql" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{41940D27-9792-4514-9295-B51804717BBB}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Get Data From SQL to Oracle" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql12">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="209,42"
+          Id="Package\Get Data From oracle to sql"
+          TopLeft="311,130" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\Get Data From SQL to Oracle"
+          TopLeft="46,126" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="106.5,5.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="188,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="227.5,82.5"
+              Start="0,0"
+              End="227.5,75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.25"
+                    Point2="0,41.25"
+                    Point3="4,41.25" />
+                  <mssgle:LineSegment
+                    End="223.5,41.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="223.5,41.25"
+                    Point2="227.5,41.25"
+                    Point3="227.5,45.25" />
+                  <mssgle:LineSegment
+                    End="227.5,75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="162.166666666667,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.16666666666666,78.5"
+              Start="0,0"
+              End="-8.16666666666666,71">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.857837181045" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.857837181045"
+                    Point2="0,31.857837181045"
+                    Point3="-4,31.857837181045" />
+                  <mssgle:LineSegment
+                    End="-4.16666666666666,31.857837181045" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.16666666666666,31.857837181045"
+                    Point2="-8.16666666666666,31.857837181045"
+                    Point3="-8.16666666666666,35.857837181045" />
+                  <mssgle:LineSegment
+                    End="-8.16666666666666,71" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Get Data From oracle to sql">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Get Data From oracle to sql\ADO NET Source"
+          TopLeft="129,94" />
+        <NodeLayout
+          Size="120,42"
+          Id="Package\Get Data From oracle to sql\Multicast"
+          TopLeft="128,178" />
+        <EdgeLayout
+          Id="Package\Get Data From oracle to sql.Paths[ADO NET Source Output]"
+          TopLeft="208,136">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-20,42"
+              Start="0,0"
+              End="-20,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17"
+                    Point2="0,21"
+                    Point3="-4,21" />
+                  <mssgle:LineSegment
+                    End="-16,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-16,21"
+                    Point2="-20,21"
+                    Point3="-20,25" />
+                  <mssgle:LineSegment
+                    End="-20,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Get Data From oracle to sql\Flat File Destination"
+          TopLeft="286,263" />
+        <EdgeLayout
+          Id="Package\Get Data From oracle to sql.Paths[Multicast Output 2]"
+          TopLeft="188,220">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="184,43"
+              Start="0,0"
+              End="184,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.5"
+                    Point2="0,21.5"
+                    Point3="4,21.5" />
+                  <mssgle:LineSegment
+                    End="180,21.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="180,21.5"
+                    Point2="184,21.5"
+                    Point3="184,25.5" />
+                  <mssgle:LineSegment
+                    End="184,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Get Data From oracle to sql\ADO NET Destination"
+          TopLeft="8,262" />
+        <EdgeLayout
+          Id="Package\Get Data From oracle to sql.Paths[Multicast Output 1]"
+          TopLeft="169.333333333333,220">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-71.8333333333333,42"
+              Start="0,0"
+              End="-71.8333333333333,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.1315789473684" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.1315789473684"
+                    Point2="0,17.1315789473684"
+                    Point3="-4,17.1315789473684" />
+                  <mssgle:LineSegment
+                    End="-67.8333333333333,17.1315789473684" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-67.8333333333333,17.1315789473684"
+                    Point2="-71.8333333333333,17.1315789473684"
+                    Point3="-71.8333333333333,21.1315789473684" />
+                  <mssgle:LineSegment
+                    End="-71.8333333333333,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Get Data From oracle to sql\ADO NET Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Get Data From oracle to sql\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

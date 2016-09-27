@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "MoveDataFromOracleToSQL", "MoveDataFromOracleToSQL\MoveDataFromOracleToSQL.dtproj", "{3CC117AC-2937-4B88-9454-DEC4240048AD}"
+EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Report Project1", "Report Project1\Report Project1.rptproj", "{BBD6D873-44D8-4FD7-B5C8-BC7E7BC14D31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Development|Default = Development|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CC117AC-2937-4B88-9454-DEC4240048AD}.Debug|Default.ActiveCfg = Development
+		{3CC117AC-2937-4B88-9454-DEC4240048AD}.Debug|Default.Build.0 = Development
+		{3CC117AC-2937-4B88-9454-DEC4240048AD}.DebugLocal|Default.ActiveCfg = Development
+		{3CC117AC-2937-4B88-9454-DEC4240048AD}.DebugLocal|Default.Build.0 = Development
+		{3CC117AC-2937-4B88-9454-DEC4240048AD}.Development|Default.ActiveCfg = Development
+		{3CC117AC-2937-4B88-9454-DEC4240048AD}.Development|Default.Build.0 = Development
+		{3CC117AC-2937-4B88-9454-DEC4240048AD}.Release|Default.ActiveCfg = Development
+		{3CC117AC-2937-4B88-9454-DEC4240048AD}.Release|Default.Build.0 = Development
+		{BBD6D873-44D8-4FD7-B5C8-BC7E7BC14D31}.Debug|Default.ActiveCfg = Debug
+		{BBD6D873-44D8-4FD7-B5C8-BC7E7BC14D31}.Debug|Default.Build.0 = Debug
+		{BBD6D873-44D8-4FD7-B5C8-BC7E7BC14D31}.Debug|Default.Deploy.0 = Debug
+		{BBD6D873-44D8-4FD7-B5C8-BC7E7BC14D31}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{BBD6D873-44D8-4FD7-B5C8-BC7E7BC14D31}.DebugLocal|Default.Build.0 = DebugLocal
+		{BBD6D873-44D8-4FD7-B5C8-BC7E7BC14D31}.Development|Default.ActiveCfg = DebugLocal
+		{BBD6D873-44D8-4FD7-B5C8-BC7E7BC14D31}.Development|Default.Build.0 = DebugLocal
+		{BBD6D873-44D8-4FD7-B5C8-BC7E7BC14D31}.Release|Default.ActiveCfg = Release
+		{BBD6D873-44D8-4FD7-B5C8-BC7E7BC14D31}.Release|Default.Build.0 = Release
+		{BBD6D873-44D8-4FD7-B5C8-BC7E7BC14D31}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
