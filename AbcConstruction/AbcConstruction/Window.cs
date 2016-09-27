@@ -34,7 +34,7 @@ namespace AbcConstruction
         public void Open()
         {
             Random r = new Random();
-            if (r.Next(100) == 50)
+            if (r.Next(100) < 50)
             {
                 Console.WriteLine("Window Broken");
                 OnBroken("hinge", 50);
