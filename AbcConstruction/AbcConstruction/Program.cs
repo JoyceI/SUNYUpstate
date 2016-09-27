@@ -17,6 +17,13 @@ namespace AbcConstruction
             Window[] houseWindows = {   new Window(70, 25), 
                                         new Window(90, 25), 
                                         new Window(50, 25) };
+            foreach (var item in houseWindows)
+            {
+                item.OnBroken += (x, y) => 
+                    Console.WriteLine("Are you kidding for parts:{0} {1:c}??!!",x,y);
+              
+            }
+
             for (int i = 0; i < 200; i++)
             {
                 foreach (var item in houseWindows)
@@ -29,5 +36,7 @@ namespace AbcConstruction
 
 
         }
+
+      
     }
 }
