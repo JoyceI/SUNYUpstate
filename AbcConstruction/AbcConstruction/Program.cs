@@ -19,9 +19,10 @@ namespace AbcConstruction
                                         new Window(50, 25) };
             foreach (var item in houseWindows)
             {
+                int z = 100;
                 item.OnBroken += (x, y) => 
-                    Console.WriteLine("Are you kidding for parts:{0} {1:c}??!!",x,y);
-              
+                    Console.WriteLine("Are you kidding for parts:{0} {1:c}??!! {2}",x,y,z);
+              // here is some changes
             }
 
             for (int i = 0; i < 200; i++)
