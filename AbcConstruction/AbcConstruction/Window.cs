@@ -5,14 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AbcConstruction
-{
+{   delegate void delBrokenWindow(string partsBroken, decimal costForReplacement);
     class Window
     {
+        public event delBrokenWindow OnBroken;
+        public bool Refundable
+        {
+            get { return (this._dateMade.AddDays(30) < DateTime.Now); }
+        }
+        public bool InWarranty
+        {
+            get { return (this._dateMade.AddYears(10) < DateTime.Now); }
+        }
+
         public decimal Width { get { return _width; } }
-        private decimal _width;
+      
         public decimal Height { get { return _height; } }
-        private decimal _height;
-        private DateTime _dateMade;
         public Window()
         {
         }
@@ -20,7 +28,25 @@ namespace AbcConstruction
         {
             this._height = height;
             this._width = width;
+            this._dateMade = DateTime.Now;
         }
 
+        public void Open()
+        {
+            Random r = new Random();
+            if (r.Next(100) == 50)
+            {
+                OnBroken("hinge", 50);
+            }
+        }
+        public void Close() { }
+
+
+        #region private fields
+        private decimal _width;
+        private decimal _height;
+        private DateTime _dateMade; 
+        #endregion
+          
     }
 }
