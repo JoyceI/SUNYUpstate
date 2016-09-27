@@ -17,11 +17,11 @@ namespace HRLib
         public HR GetFullHRDataSet()
         {
             HR ds = new HR();
+          
             OracleConnection conn = new OracleConnection(_connStr);
             EMPLOYEESTableAdapter eta = new EMPLOYEESTableAdapter() 
             { Connection = conn };
             eta.Fill(ds.EMPLOYEES);
-            
             DEPARTMENTSTableAdapter dta = new DEPARTMENTSTableAdapter() 
             { Connection = conn };
             dta.Fill(ds.DEPARTMENTS);
