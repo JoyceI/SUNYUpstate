@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <DataSet Name="">
+    <Query>
+      <DataSourceReference>OracleDB</DataSourceReference>
+      <CommandText>SELECT        EMPLOYEES.FIRST_NAME, EMPLOYEES.LAST_NAME, EMPLOYEES.EMAIL, EMPLOYEES.PHONE_NUMBER, EMPLOYEES.SALARY, DEPARTMENTS.DEPARTMENT_NAME, LOCATIONS.STREET_ADDRESS, 
+                         LOCATIONS.POSTAL_CODE, LOCATIONS.CITY, LOCATIONS.STATE_PROVINCE, COUNTRIES.COUNTRY_NAME, REGIONS.REGION_NAME
+FROM            DEPARTMENTS, EMPLOYEES, LOCATIONS, REGIONS, COUNTRIES
+WHERE        DEPARTMENTS.DEPARTMENT_ID = EMPLOYEES.DEPARTMENT_ID AND DEPARTMENTS.LOCATION_ID = LOCATIONS.LOCATION_ID AND LOCATIONS.COUNTRY_ID = COUNTRIES.COUNTRY_ID AND 
+                         REGIONS.REGION_ID = COUNTRIES.REGION_ID</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="FIRST_NAME">
+        <DataField>FIRST_NAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="LAST_NAME">
+        <DataField>LAST_NAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="EMAIL">
+        <DataField>EMAIL</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="PHONE_NUMBER">
+        <DataField>PHONE_NUMBER</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SALARY">
+        <DataField>SALARY</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="DEPARTMENT_NAME">
+        <DataField>DEPARTMENT_NAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="STREET_ADDRESS">
+        <DataField>STREET_ADDRESS</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="POSTAL_CODE">
+        <DataField>POSTAL_CODE</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="CITY">
+        <DataField>CITY</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="STATE_PROVINCE">
+        <DataField>STATE_PROVINCE</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="COUNTRY_NAME">
+        <DataField>COUNTRY_NAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="REGION_NAME">
+        <DataField>REGION_NAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
