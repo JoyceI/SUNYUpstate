@@ -2,6 +2,7 @@
 using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -21,9 +22,9 @@ namespace ReadOracleWriteExcel
         /// <summary>
         /// returns the fully qualified file name to the excel file.
         /// </summary>
-        /// <param name="dr"></param>
+        /// <param name="dr">please pass in a data reader object</param>
         /// <returns></returns>
-        public string WriteDR(OracleDataReader dr)
+        public string WriteDR(DbDataReader dr)
         {
             using (ExcelPackage xlPackage = new ExcelPackage(newFile))
             {
@@ -63,6 +64,13 @@ namespace ReadOracleWriteExcel
 
             }
             return newFile.FullName;
+        }
+
+        public string WriteDR(DbConnection conn, string query)
+        {
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = query;
+            return WriteDR(cmd.ExecuteReader());
         }
     }
 }

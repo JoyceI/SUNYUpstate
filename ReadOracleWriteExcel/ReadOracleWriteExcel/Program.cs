@@ -1,6 +1,7 @@
 ﻿using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -56,11 +57,28 @@ namespace ReadOracleWriteExcel
            DRtoExcel writer = new DRtoExcel(@"C:\Lab\Sample.xlsx");
            string filename = writer.WriteDR(dr);
            Console.WriteLine(filename + " written");
+//refactor the following 3 reports into method(s) in DRtoExcel
+           //string regionQuery = "Select * from hr.regions";
+           //var regionCmd = new OracleCommand(regionQuery, conn);
+           //DRtoExcel regionReport = new DRtoExcel(@"C:\Lab\Region.xlsx");
+           //regionReport.WriteDR(regionCmd.ExecuteReader());
+          
+           //string deptQuery = "Select * from hr.departments";
+           //var deptCmd = new OracleCommand(deptQuery, conn);
+           //DRtoExcel deptReport = new DRtoExcel(@"C:\Lab\Department.xlsx");
+           //deptReport.WriteDR(deptCmd.ExecuteReader());
+
+           //string employeeQuery = "Select * from hr.employees";
+           //var empCmd = new OracleCommand(employeeQuery, conn);
+           //DRtoExcel empReport = new DRtoExcel(@"C:\Lab\emp.xlsx");
+           //empReport.WriteDR(empCmd.ExecuteReader());
+           DRtoExcel regionWriter = new DRtoExcel(@"C:\Lab\Region.xlsx");
+           regionWriter.WriteDR(conn, "Select * from regions");
+
+           DRtoExcel JobWriter = new DRtoExcel(@"C:\Lab\Jobs.xlsx");
+           JobWriter.WriteDR(conn, "Select * from Hr.Jobs");
+            
             }
-            //Create OracleCommand
-            //OracleCommand ExecuteReader to get OracleDataReaderBack
-            //
-            //write Excel
             
         }
     }
