@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="xe hr"
+  DTS:DTSID="{D5260711-D2F7-4810-8414-E82182420604}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=xe;User ID=hr;Provider=OraOLEDB.Oracle.1;Persist Security Info=True;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6LTg5kYg9EODf+umHrOtTAAAAAACAAAAAAAQZgAAAAEAACAAAAAD98i4IxqAUrTFhO9FJfsL5/EieeSEt1p9qULfAX6GOgAAAAAOgAAAAAIAACAAAAD1HSB3pn4+KaUouR6NFzAQfx6cRbT/gr41KXvXJavQLIAAAABvbvaBo8unCIuwLmR/QGQeWLC5Trr3MeUjWv7C8gteMbGrQSizT9zDHjYOasBiZidIiPHqT/gKUaIVVYngf4kYXSNt5mO/V7g0RsTIygqadTik3ldy24aF8qZ+/JQIgNiyxIfiYBGvyeacQfJWuoU+ejK7d4emsxWEAHiheZHCm0AAAAB3LxMEH8zhrQArXWqTz1sI0PT9t5PEWsFhi1q1AoUuhOEDxDHt05OxuiRoZzF3lTOits/8+bz0qCcRjLudLk6X</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

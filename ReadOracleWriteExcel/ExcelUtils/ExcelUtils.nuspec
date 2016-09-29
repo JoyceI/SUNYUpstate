@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>chinzilla.ExcelUtil</id>
+    <version>0.3</version>
+    <title>Excel Generator</title>
+    <authors>Victor Chin</authors>
+    <owners>Victor Chin</owners>
+    <projectUrl>https://github.com/VictorChin/SUNYUpstate/tree/master/ReadOracleWriteExcel/ReadOracleWriteExcel</projectUrl>
+    <iconUrl>https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Godzilla_Simpsons.svg/500px-Godzilla_Simpsons.svg.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>demo library for excel generation</description>
+    <releaseNotes>Excel utility to take DbConnection and Query and produce excel. All credit goes to EPPLUS.CodePlex.com,
+No original codes here.</releaseNotes>
+    <tags>Excel Sheet from Database</tags>
+  </metadata>
+</package>
