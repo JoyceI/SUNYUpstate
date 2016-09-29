@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "SSRSIntro", "SSRSIntro\SSRSIntro.rptproj", "{860CB7E3-E3B5-4F66-8A89-CE05227A9451}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{860CB7E3-E3B5-4F66-8A89-CE05227A9451}.Debug|Default.ActiveCfg = Debug
+		{860CB7E3-E3B5-4F66-8A89-CE05227A9451}.Debug|Default.Build.0 = Debug
+		{860CB7E3-E3B5-4F66-8A89-CE05227A9451}.Debug|Default.Deploy.0 = Debug
+		{860CB7E3-E3B5-4F66-8A89-CE05227A9451}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{860CB7E3-E3B5-4F66-8A89-CE05227A9451}.DebugLocal|Default.Build.0 = DebugLocal
+		{860CB7E3-E3B5-4F66-8A89-CE05227A9451}.Release|Default.ActiveCfg = Release
+		{860CB7E3-E3B5-4F66-8A89-CE05227A9451}.Release|Default.Build.0 = Release
+		{860CB7E3-E3B5-4F66-8A89-CE05227A9451}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

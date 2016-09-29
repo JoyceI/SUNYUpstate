@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="OracleHR">
+  <ConnectionProperties>
+    <Extension>ORACLE</Extension>
+    <ConnectString>Data Source=xe;Unicode=True</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>2e0bbbfb-0dc6-44b2-b307-69cfff8e5486</DataSourceID>
+</RptDataSource>

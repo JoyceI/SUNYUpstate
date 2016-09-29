@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <DataSet Name="">
+    <Query>
+      <DataSourceReference>OracleHR</DataSourceReference>
+      <CommandText>SELECT        EMP_DETAILS_VIEW.*
+FROM            EMP_DETAILS_VIEW</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="EMPLOYEE_ID">
+        <DataField>EMPLOYEE_ID</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="JOB_ID">
+        <DataField>JOB_ID</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="MANAGER_ID">
+        <DataField>MANAGER_ID</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="DEPARTMENT_ID">
+        <DataField>DEPARTMENT_ID</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="LOCATION_ID">
+        <DataField>LOCATION_ID</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="COUNTRY_ID">
+        <DataField>COUNTRY_ID</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="FIRST_NAME">
+        <DataField>FIRST_NAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="LAST_NAME">
+        <DataField>LAST_NAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SALARY">
+        <DataField>SALARY</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="COMMISSION_PCT">
+        <DataField>COMMISSION_PCT</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="DEPARTMENT_NAME">
+        <DataField>DEPARTMENT_NAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="JOB_TITLE">
+        <DataField>JOB_TITLE</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="CITY">
+        <DataField>CITY</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="STATE_PROVINCE">
+        <DataField>STATE_PROVINCE</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="COUNTRY_NAME">
+        <DataField>COUNTRY_NAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="REGION_NAME">
+        <DataField>REGION_NAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

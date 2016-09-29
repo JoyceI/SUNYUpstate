@@ -1,0 +1,2118 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/28/2016 1:04:54 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DEV"
+  DTS:CreatorName="dev\admin"
+  DTS:DTSID="{EDA5F9E4-9C04-4A26-895C-85B95DA97B1A}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="12.0.2430.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{BD8B0F2A-1E99-4734-9B4D-66A18C933EB5}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Bad Emp Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{96D62A56-1BE5-4C4E-8878-5723D646A795}"
+      DTS:ObjectName="Bad Emp Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="c:\Lab\BadEmp.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EMPLOYEE_ID"
+              DTS:DTSID="{C15C9751-8E51-40BD-A298-B0DE1DA6ECAA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FIRST_NAME"
+              DTS:DTSID="{FF600996-201C-4231-9365-D5D118FC81AB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LAST_NAME"
+              DTS:DTSID="{F2801661-CB3F-4251-B934-6F3C643AED9A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EMAIL"
+              DTS:DTSID="{86FE22F4-34F8-4806-A2DF-1AAE86A0C930}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PHONE_NUMBER"
+              DTS:DTSID="{6462EDD0-D95D-443A-9727-FA2384561BB4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HIRE_DATE"
+              DTS:DTSID="{9B4F544D-B105-4C8D-9CA0-16C7DEE31CB6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="JOB_ID"
+              DTS:DTSID="{12990392-60DC-421B-A1F5-478958BD106C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="8"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SALARY"
+              DTS:DTSID="{9787A9D5-5385-4213-8055-480D8A710C5D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="2"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COMMISSION_PCT"
+              DTS:DTSID="{753FEFBF-DBAD-44B8-8552-1602872159C0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MANAGER_ID"
+              DTS:DTSID="{B8891314-1D0D-49DF-8561-3602B4494697}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DEPARTMENT_ID"
+              DTS:DTSID="{73D2514A-D491-452E-A11A-F56124913CD7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{1AC4E5F2-8DB0-4F6A-A291-AB34AF9B2E34}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{E24F349D-15A5-4CB5-9D3C-DD9B7A6FBAB4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Create Employee CSV"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{CF09CA40-6EDE-4CC9-8263-700400A6F7D5}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create Employee CSV"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Create Employee CSV\Add FullName and DateImported"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add FullName and DateImported"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Create Employee CSV\Add FullName and DateImported.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Add FullName and DateImported.Inputs[Derived Column Input].Columns[FIRST_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="FIRST_NAME"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[FIRST_NAME]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Add FullName and DateImported.Inputs[Derived Column Input].Columns[LAST_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="LAST_NAME"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[LAST_NAME]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Create Employee CSV\Add FullName and DateImported.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Create Employee CSV\Add FullName and DateImported.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Add FullName and DateImported.Outputs[Derived Column Output].Columns[FullName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="46"
+                      lineageId="Package\Create Employee CSV\Add FullName and DateImported.Outputs[Derived Column Output].Columns[FullName]"
+                      name="FullName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[FIRST_NAME]} + " " + #{Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[LAST_NAME]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">FIRST_NAME + " " + LAST_NAME</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Add FullName and DateImported.Outputs[Derived Column Output].Columns[DateImported]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Create Employee CSV\Add FullName and DateImported.Outputs[Derived Column Output].Columns[DateImported]"
+                      name="DateImported"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Create Employee CSV\Add FullName and DateImported.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Create Employee CSV\Add FullName and DateImported.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Add FullName and DateImported.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Create Employee CSV\Add FullName and DateImported.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Add FullName and DateImported.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Create Employee CSV\Add FullName and DateImported.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Create Employee CSV\AW2012"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="AW2012"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Victor]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Create Employee CSV\AW2012.Connections[OleDbConnection]"
+                  connectionManagerID="{8DC13AD6-C591-4F4A-872B-B1DCD0DCF9D8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Dev.AdventureWorks2012]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].Columns[EMPLOYEE_ID]"
+                      cachedDataType="numeric"
+                      cachedName="EMPLOYEE_ID"
+                      cachedPrecision="6"
+                      externalMetadataColumnId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[EMPLOYEE_ID]"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[EMPLOYEE_ID]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].Columns[EMAIL]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="EMAIL"
+                      externalMetadataColumnId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[EMAIL]"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[EMAIL]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].Columns[PHONE_NUMBER]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="PHONE_NUMBER"
+                      externalMetadataColumnId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[PHONE_NUMBER]"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[PHONE_NUMBER]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].Columns[HIRE_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="HIRE_DATE"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[HIRE_DATE]"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[HIRE_DATE]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].Columns[JOB_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="JOB_ID"
+                      externalMetadataColumnId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[JOB_ID]"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[JOB_ID]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].Columns[SALARY]"
+                      cachedDataType="numeric"
+                      cachedName="SALARY"
+                      cachedPrecision="8"
+                      cachedScale="2"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[SALARY]"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[SALARY]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].Columns[COMMISSION_PCT]"
+                      cachedDataType="numeric"
+                      cachedName="COMMISSION_PCT"
+                      cachedPrecision="2"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[COMMISSION_PCT]"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[COMMISSION_PCT]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].Columns[MANAGER_ID]"
+                      cachedDataType="numeric"
+                      cachedName="MANAGER_ID"
+                      cachedPrecision="6"
+                      externalMetadataColumnId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[MANAGER_ID]"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[MANAGER_ID]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].Columns[DEPARTMENT_ID]"
+                      cachedDataType="numeric"
+                      cachedName="DEPARTMENT_ID"
+                      cachedPrecision="4"
+                      externalMetadataColumnId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTMENT_ID]"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[DEPARTMENT_ID]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].Columns[DEPARTMENT_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="DEPARTMENT_NAME"
+                      externalMetadataColumnId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTMENT_NAME]"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[DEPARTMENT_NAME]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].Columns[FullName]"
+                      cachedDataType="wstr"
+                      cachedLength="46"
+                      cachedName="FullName"
+                      externalMetadataColumnId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[FullName]"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[FullName]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].Columns[DateImported]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DateImported"
+                      externalMetadataColumnId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[DateImported]"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[DateImported]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[EMPLOYEE_ID]"
+                      dataType="numeric"
+                      name="EMPLOYEE_ID"
+                      precision="6" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[FullName]"
+                      dataType="wstr"
+                      length="46"
+                      name="FullName" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[EMAIL]"
+                      dataType="wstr"
+                      length="25"
+                      name="EMAIL" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[PHONE_NUMBER]"
+                      dataType="wstr"
+                      length="20"
+                      name="PHONE_NUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[HIRE_DATE]"
+                      dataType="dbTimeStamp"
+                      name="HIRE_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[JOB_ID]"
+                      dataType="wstr"
+                      length="10"
+                      name="JOB_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[SALARY]"
+                      dataType="numeric"
+                      name="SALARY"
+                      precision="8"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[COMMISSION_PCT]"
+                      dataType="numeric"
+                      name="COMMISSION_PCT"
+                      precision="2"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[MANAGER_ID]"
+                      dataType="numeric"
+                      name="MANAGER_ID"
+                      precision="6" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTMENT_ID]"
+                      dataType="numeric"
+                      name="DEPARTMENT_ID"
+                      precision="4" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTMENT_NAME]"
+                      dataType="wstr"
+                      length="30"
+                      name="DEPARTMENT_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input].ExternalColumns[DateImported]"
+                      dataType="dbTimeStamp"
+                      name="DateImported" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Create Employee CSV\AW2012.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\AW2012.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Create Employee CSV\AW2012.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\AW2012.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Create Employee CSV\AW2012.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Create Employee CSV\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Flat File Destination">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Create Employee CSV\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Bad Emp Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Bad Emp Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[EMPLOYEE_ID]"
+                      cachedDataType="numeric"
+                      cachedName="EMPLOYEE_ID"
+                      cachedPrecision="6"
+                      externalMetadataColumnId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EMPLOYEE_ID]"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[EMPLOYEE_ID]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[FIRST_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="FIRST_NAME"
+                      externalMetadataColumnId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FIRST_NAME]"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[FIRST_NAME]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[LAST_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="LAST_NAME"
+                      externalMetadataColumnId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[LAST_NAME]"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[LAST_NAME]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[EMAIL]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="EMAIL"
+                      externalMetadataColumnId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EMAIL]"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[EMAIL]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[PHONE_NUMBER]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="PHONE_NUMBER"
+                      externalMetadataColumnId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PHONE_NUMBER]"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[PHONE_NUMBER]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[HIRE_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="HIRE_DATE"
+                      externalMetadataColumnId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[HIRE_DATE]"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[HIRE_DATE]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[JOB_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="JOB_ID"
+                      externalMetadataColumnId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[JOB_ID]"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[JOB_ID]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[SALARY]"
+                      cachedDataType="numeric"
+                      cachedName="SALARY"
+                      cachedPrecision="8"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SALARY]"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[SALARY]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[COMMISSION_PCT]"
+                      cachedDataType="numeric"
+                      cachedName="COMMISSION_PCT"
+                      cachedPrecision="2"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[COMMISSION_PCT]"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[COMMISSION_PCT]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[MANAGER_ID]"
+                      cachedDataType="numeric"
+                      cachedName="MANAGER_ID"
+                      cachedPrecision="6"
+                      externalMetadataColumnId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[MANAGER_ID]"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[MANAGER_ID]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[DEPARTMENT_ID]"
+                      cachedDataType="numeric"
+                      cachedName="DEPARTMENT_ID"
+                      cachedPrecision="4"
+                      externalMetadataColumnId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DEPARTMENT_ID]"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[DEPARTMENT_ID]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EMPLOYEE_ID]"
+                      dataType="numeric"
+                      name="EMPLOYEE_ID"
+                      precision="6" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FIRST_NAME]"
+                      dataType="wstr"
+                      length="20"
+                      name="FIRST_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[LAST_NAME]"
+                      dataType="wstr"
+                      length="25"
+                      name="LAST_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EMAIL]"
+                      dataType="wstr"
+                      length="25"
+                      name="EMAIL" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PHONE_NUMBER]"
+                      dataType="wstr"
+                      length="20"
+                      name="PHONE_NUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[HIRE_DATE]"
+                      dataType="dbTimeStamp"
+                      name="HIRE_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[JOB_ID]"
+                      dataType="wstr"
+                      length="10"
+                      name="JOB_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SALARY]"
+                      dataType="numeric"
+                      name="SALARY"
+                      precision="8"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[COMMISSION_PCT]"
+                      dataType="numeric"
+                      name="COMMISSION_PCT"
+                      precision="2"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[MANAGER_ID]"
+                      dataType="numeric"
+                      name="MANAGER_ID"
+                      precision="6" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DEPARTMENT_ID]"
+                      dataType="numeric"
+                      name="DEPARTMENT_ID"
+                      precision="4" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Create Employee CSV\Lookup DepartmentName"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup DepartmentName"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from "HR"."DEPARTMENTS"</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from "HR"."DEPARTMENTS") "refTable"
+where "refTable"."DEPARTMENT_ID" = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DEPARTMENT_ID" dataType="DT_NUMERIC" length="0" precision="4" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DEPARTMENT_NAME" dataType="DT_WSTR" length="30" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MANAGER_ID" dataType="DT_NUMERIC" length="0" precision="6" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LOCATION_ID" dataType="DT_NUMERIC" length="0" precision="4" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[DEPARTMENT_ID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Create Employee CSV\Lookup DepartmentName.Connections[OleDbConnection]"
+                  connectionManagerID="{D5260711-D2F7-4810-8414-E82182420604}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[xe hr]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Create Employee CSV\Lookup DepartmentName.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Lookup DepartmentName.Inputs[Lookup Input].Columns[DEPARTMENT_ID]"
+                      cachedDataType="numeric"
+                      cachedName="DEPARTMENT_ID"
+                      cachedPrecision="4"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[DEPARTMENT_ID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">DEPARTMENT_ID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Create Employee CSV\Lookup DepartmentName.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="IgnoreFailure"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Create Employee CSV\Lookup DepartmentName.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Lookup DepartmentName.Outputs[Lookup Match Output].Columns[DEPARTMENT_NAME]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="30"
+                      lineageId="Package\Create Employee CSV\Lookup DepartmentName.Outputs[Lookup Match Output].Columns[DEPARTMENT_NAME]"
+                      name="DEPARTMENT_NAME"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DEPARTMENT_NAME</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Create Employee CSV\Lookup DepartmentName.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Create Employee CSV\Lookup DepartmentName.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Create Employee CSV\Lookup DepartmentName.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Create Employee CSV\Lookup DepartmentName.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Lookup DepartmentName.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Create Employee CSV\Lookup DepartmentName.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Lookup DepartmentName.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Create Employee CSV\Lookup DepartmentName.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Create Employee CSV\Oracle Employees"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Oracle Employees"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">"HR"."EMPLOYEES"</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Create Employee CSV\Oracle Employees.Connections[OleDbConnection]"
+                  connectionManagerID="{D5260711-D2F7-4810-8414-E82182420604}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[xe hr]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[EMPLOYEE_ID]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[EMPLOYEE_ID]"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[EMPLOYEE_ID]"
+                      name="EMPLOYEE_ID"
+                      precision="6"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[FIRST_NAME]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[FIRST_NAME]"
+                      length="20"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[FIRST_NAME]"
+                      name="FIRST_NAME"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[LAST_NAME]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[LAST_NAME]"
+                      length="25"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[LAST_NAME]"
+                      name="LAST_NAME"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[EMAIL]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[EMAIL]"
+                      length="25"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[EMAIL]"
+                      name="EMAIL"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[PHONE_NUMBER]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[PHONE_NUMBER]"
+                      length="20"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[PHONE_NUMBER]"
+                      name="PHONE_NUMBER"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[HIRE_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[HIRE_DATE]"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[HIRE_DATE]"
+                      name="HIRE_DATE"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[JOB_ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[JOB_ID]"
+                      length="10"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[JOB_ID]"
+                      name="JOB_ID"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[SALARY]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[SALARY]"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[SALARY]"
+                      name="SALARY"
+                      precision="8"
+                      scale="2"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[COMMISSION_PCT]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[COMMISSION_PCT]"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[COMMISSION_PCT]"
+                      name="COMMISSION_PCT"
+                      precision="2"
+                      scale="2"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[MANAGER_ID]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[MANAGER_ID]"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[MANAGER_ID]"
+                      name="MANAGER_ID"
+                      precision="6"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[DEPARTMENT_ID]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[DEPARTMENT_ID]"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[DEPARTMENT_ID]"
+                      name="DEPARTMENT_ID"
+                      precision="4"
+                      truncationRowDisposition="RedirectRow" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[EMPLOYEE_ID]"
+                      dataType="numeric"
+                      name="EMPLOYEE_ID"
+                      precision="6" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[FIRST_NAME]"
+                      dataType="wstr"
+                      length="20"
+                      name="FIRST_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[LAST_NAME]"
+                      dataType="wstr"
+                      length="25"
+                      name="LAST_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[EMAIL]"
+                      dataType="wstr"
+                      length="25"
+                      name="EMAIL" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[PHONE_NUMBER]"
+                      dataType="wstr"
+                      length="20"
+                      name="PHONE_NUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[HIRE_DATE]"
+                      dataType="dbTimeStamp"
+                      name="HIRE_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[JOB_ID]"
+                      dataType="wstr"
+                      length="10"
+                      name="JOB_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[SALARY]"
+                      dataType="numeric"
+                      name="SALARY"
+                      precision="8"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[COMMISSION_PCT]"
+                      dataType="numeric"
+                      name="COMMISSION_PCT"
+                      precision="2"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[MANAGER_ID]"
+                      dataType="numeric"
+                      name="MANAGER_ID"
+                      precision="6" />
+                    <externalMetadataColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].ExternalColumns[DEPARTMENT_ID]"
+                      dataType="numeric"
+                      name="DEPARTMENT_ID"
+                      precision="4" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[EMPLOYEE_ID]"
+                      dataType="numeric"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[EMPLOYEE_ID]"
+                      name="EMPLOYEE_ID"
+                      precision="6" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[FIRST_NAME]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[FIRST_NAME]"
+                      name="FIRST_NAME" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[LAST_NAME]"
+                      dataType="wstr"
+                      length="25"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[LAST_NAME]"
+                      name="LAST_NAME" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[EMAIL]"
+                      dataType="wstr"
+                      length="25"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[EMAIL]"
+                      name="EMAIL" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[PHONE_NUMBER]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[PHONE_NUMBER]"
+                      name="PHONE_NUMBER" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[HIRE_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[HIRE_DATE]"
+                      name="HIRE_DATE" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[JOB_ID]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[JOB_ID]"
+                      name="JOB_ID" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[SALARY]"
+                      dataType="numeric"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[SALARY]"
+                      name="SALARY"
+                      precision="8"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[COMMISSION_PCT]"
+                      dataType="numeric"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[COMMISSION_PCT]"
+                      name="COMMISSION_PCT"
+                      precision="2"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[MANAGER_ID]"
+                      dataType="numeric"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[MANAGER_ID]"
+                      name="MANAGER_ID"
+                      precision="6" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[DEPARTMENT_ID]"
+                      dataType="numeric"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[DEPARTMENT_ID]"
+                      name="DEPARTMENT_ID"
+                      precision="4" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Create Employee CSV\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Create Employee CSV\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Sort.Inputs[Sort Input].Columns[EMPLOYEE_ID]"
+                      cachedDataType="numeric"
+                      cachedName="EMPLOYEE_ID"
+                      cachedPrecision="6"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[EMPLOYEE_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Sort.Inputs[Sort Input].Columns[FIRST_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="FIRST_NAME"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[FIRST_NAME]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Sort.Inputs[Sort Input].Columns[LAST_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="LAST_NAME"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[LAST_NAME]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Sort.Inputs[Sort Input].Columns[EMAIL]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="EMAIL"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[EMAIL]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Sort.Inputs[Sort Input].Columns[PHONE_NUMBER]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="PHONE_NUMBER"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[PHONE_NUMBER]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Sort.Inputs[Sort Input].Columns[HIRE_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="HIRE_DATE"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[HIRE_DATE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Sort.Inputs[Sort Input].Columns[JOB_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="JOB_ID"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[JOB_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Sort.Inputs[Sort Input].Columns[SALARY]"
+                      cachedDataType="numeric"
+                      cachedName="SALARY"
+                      cachedPrecision="8"
+                      cachedScale="2"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[SALARY]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Sort.Inputs[Sort Input].Columns[COMMISSION_PCT]"
+                      cachedDataType="numeric"
+                      cachedName="COMMISSION_PCT"
+                      cachedPrecision="2"
+                      cachedScale="2"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[COMMISSION_PCT]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Sort.Inputs[Sort Input].Columns[MANAGER_ID]"
+                      cachedDataType="numeric"
+                      cachedName="MANAGER_ID"
+                      cachedPrecision="6"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[MANAGER_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Sort.Inputs[Sort Input].Columns[DEPARTMENT_ID]"
+                      cachedDataType="numeric"
+                      cachedName="DEPARTMENT_ID"
+                      cachedPrecision="4"
+                      lineageId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[DEPARTMENT_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Sort.Inputs[Sort Input].Columns[DEPARTMENT_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="DEPARTMENT_NAME"
+                      lineageId="Package\Create Employee CSV\Lookup DepartmentName.Outputs[Lookup Match Output].Columns[DEPARTMENT_NAME]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Sort.Inputs[Sort Input].Columns[FullName]"
+                      cachedDataType="wstr"
+                      cachedLength="46"
+                      cachedName="FullName"
+                      lineageId="Package\Create Employee CSV\Add FullName and DateImported.Outputs[Derived Column Output].Columns[FullName]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Create Employee CSV\Sort.Inputs[Sort Input].Columns[DateImported]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DateImported"
+                      lineageId="Package\Create Employee CSV\Add FullName and DateImported.Outputs[Derived Column Output].Columns[DateImported]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Create Employee CSV\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[EMPLOYEE_ID]"
+                      dataType="numeric"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[EMPLOYEE_ID]"
+                      name="EMPLOYEE_ID"
+                      precision="6">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[EMPLOYEE_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[FIRST_NAME]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[FIRST_NAME]"
+                      name="FIRST_NAME">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[FIRST_NAME]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[LAST_NAME]"
+                      dataType="wstr"
+                      length="25"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[LAST_NAME]"
+                      name="LAST_NAME">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[LAST_NAME]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[EMAIL]"
+                      dataType="wstr"
+                      length="25"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[EMAIL]"
+                      name="EMAIL">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[EMAIL]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[PHONE_NUMBER]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[PHONE_NUMBER]"
+                      name="PHONE_NUMBER">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[PHONE_NUMBER]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[HIRE_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[HIRE_DATE]"
+                      name="HIRE_DATE"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[HIRE_DATE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[JOB_ID]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[JOB_ID]"
+                      name="JOB_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[JOB_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[SALARY]"
+                      dataType="numeric"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[SALARY]"
+                      name="SALARY"
+                      precision="8"
+                      scale="2"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[SALARY]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[COMMISSION_PCT]"
+                      dataType="numeric"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[COMMISSION_PCT]"
+                      name="COMMISSION_PCT"
+                      precision="2"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[COMMISSION_PCT]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[MANAGER_ID]"
+                      dataType="numeric"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[MANAGER_ID]"
+                      name="MANAGER_ID"
+                      precision="6">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[MANAGER_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[DEPARTMENT_ID]"
+                      dataType="numeric"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[DEPARTMENT_ID]"
+                      name="DEPARTMENT_ID"
+                      precision="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output].Columns[DEPARTMENT_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[DEPARTMENT_NAME]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[DEPARTMENT_NAME]"
+                      name="DEPARTMENT_NAME">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Create Employee CSV\Lookup DepartmentName.Outputs[Lookup Match Output].Columns[DEPARTMENT_NAME]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[FullName]"
+                      dataType="wstr"
+                      length="46"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[FullName]"
+                      name="FullName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Create Employee CSV\Add FullName and DateImported.Outputs[Derived Column Output].Columns[FullName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[DateImported]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Create Employee CSV\Sort.Outputs[Sort Output].Columns[DateImported]"
+                      name="DateImported">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Create Employee CSV\Add FullName and DateImported.Outputs[Derived Column Output].Columns[DateImported]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Create Employee CSV.Paths[Derived Column Output]"
+              endId="Package\Create Employee CSV\Sort.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\Create Employee CSV\Add FullName and DateImported.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Create Employee CSV.Paths[Lookup Match Output]"
+              endId="Package\Create Employee CSV\Add FullName and DateImported.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Create Employee CSV\Lookup DepartmentName.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Create Employee CSV.Paths[OLE DB Source Error Output]"
+              endId="Package\Create Employee CSV\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Error Output"
+              startId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Error Output]" />
+            <path
+              refId="Package\Create Employee CSV.Paths[OLE DB Source Output]"
+              endId="Package\Create Employee CSV\Lookup DepartmentName.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\Create Employee CSV\Oracle Employees.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Create Employee CSV.Paths[Sort Output]"
+              endId="Package\Create Employee CSV\AW2012.Inputs[OLE DB Destination Input]"
+              name="Sort Output"
+              startId="Package\Create Employee CSV\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Notify Success"
+      DTS:CreationName="Microsoft.SendMailTask"
+      DTS:Description="Send Mail Task"
+      DTS:DTSID="{33F6DC02-E881-444B-9BC7-ED957BE3E1A3}"
+      DTS:ExecutableType="Microsoft.SendMailTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Notify Success"
+      DTS:TaskContact="Send Mail Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SendMailTask:SendMailTaskData
+          SendMailTask:SMTPServer="{21C4252A-D88B-4424-990C-4A0BC572C7B1}"
+          SendMailTask:From="job@sample.com"
+          SendMailTask:To="ypchin@yahoo.com"
+          SendMailTask:Subject="Import Employee Completed"
+          SendMailTask:MessageSource="Completed" xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Table Victor"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{20020446-66CC-4C38-B2EF-D1F6716A4249}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Table Victor"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8DC13AD6-C591-4F4A-872B-B1DCD0DCF9D8}"
+          SQLTask:SqlStatementSource="Truncate Table Victor" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{5B941CDF-7ECE-4442-BB39-BD125A241AF1}"
+      DTS:From="Package\Truncate Table Victor"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Create Employee CSV" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{A9C2D0D2-440C-478D-BFDD-FD97BBD12F00}"
+      DTS:From="Package\Create Employee CSV"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Notify Success" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql12">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="181,42"
+          Id="Package\Create Employee CSV"
+          TopLeft="81,123.285714285714" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Truncate Table Victor"
+          TopLeft="68.5714285714286,22.8571428571429" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="158.571428571429,64.8571428571429">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.9285714285714,58.4285714285714"
+              Start="0,0"
+              End="12.9285714285714,50.9285714285714">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.2142857142857" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.2142857142857"
+                    Point2="0,29.2142857142857"
+                    Point3="4,29.2142857142857" />
+                  <mssgle:LineSegment
+                    End="8.92857142857142,29.2142857142857" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.92857142857142,29.2142857142857"
+                    Point2="12.9285714285714,29.2142857142857"
+                    Point3="12.9285714285714,33.2142857142857" />
+                  <mssgle:LineSegment
+                    End="12.9285714285714,50.9285714285714" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="147,42"
+          Id="Package\Notify Success"
+          TopLeft="121.428571428571,205" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="171.5,165.285714285714">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="23.4285714285714,39.7142857142857"
+              Start="0,0"
+              End="23.4285714285714,32.2142857142857">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.8571428571429" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.8571428571429"
+                    Point2="0,19.8571428571429"
+                    Point3="4,19.8571428571429" />
+                  <mssgle:LineSegment
+                    End="19.4285714285714,19.8571428571429" />
+                  <mssgle:CubicBezierSegment
+                    Point1="19.4285714285714,19.8571428571429"
+                    Point2="23.4285714285714,19.8571428571429"
+                    Point3="23.4285714285714,23.8571428571429" />
+                  <mssgle:LineSegment
+                    End="23.4285714285714,32.2142857142857" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Create Employee CSV">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Create Employee CSV\Oracle Employees"
+          TopLeft="142,32" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Create Employee CSV\Flat File Destination"
+          TopLeft="428.181818181818,161.727272727273" />
+        <EdgeLayout
+          Id="Package\Create Employee CSV.Paths[OLE DB Source Error Output]"
+          TopLeft="223.5,74">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="290.681818181818,87.7272727272727"
+              Start="0,0"
+              End="290.681818181818,80.2272727272727">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.8636363636364" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39.8636363636364"
+                    Point2="0,43.8636363636364"
+                    Point3="4,43.8636363636364" />
+                  <mssgle:LineSegment
+                    End="286.681818181818,43.8636363636364" />
+                  <mssgle:CubicBezierSegment
+                    Point1="286.681818181818,43.8636363636364"
+                    Point2="290.681818181818,43.8636363636364"
+                    Point3="290.681818181818,47.8636363636364" />
+                  <mssgle:LineSegment
+                    End="290.681818181818,80.2272727272727" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="81.9070028409091,48.8636363636364,126.8678125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="200,42"
+          Id="Package\Create Employee CSV\Lookup DepartmentName"
+          TopLeft="74.5454545454545,142.727272727273" />
+        <EdgeLayout
+          Id="Package\Create Employee CSV.Paths[OLE DB Source Output]"
+          TopLeft="197.666666666667,74">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-23.1212121212121,68.7272727272727"
+              Start="0,0"
+              End="-23.1212121212121,61.2272727272727">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.8917485916271" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.8917485916271"
+                    Point2="0,27.8917485916271"
+                    Point3="-4,27.8917485916271" />
+                  <mssgle:LineSegment
+                    End="-19.1212121212121,27.8917485916271" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-19.1212121212121,27.8917485916271"
+                    Point2="-23.1212121212121,27.8917485916271"
+                    Point3="-23.1212121212121,31.8917485916271" />
+                  <mssgle:LineSegment
+                    End="-23.1212121212121,61.2272727272727" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="234,42"
+          Id="Package\Create Employee CSV\Add FullName and DateImported"
+          TopLeft="168.712121212121,237.272727272727" />
+        <EdgeLayout
+          Id="Package\Create Employee CSV.Paths[Lookup Match Output]"
+          TopLeft="174.545454545455,184.727272727273">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="111.166666666667,52.5454545454546"
+              Start="0,0"
+              End="111.166666666667,45.0454545454546">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.2727272727273" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.2727272727273"
+                    Point2="0,26.2727272727273"
+                    Point3="4,26.2727272727273" />
+                  <mssgle:LineSegment
+                    End="107.166666666667,26.2727272727273" />
+                  <mssgle:CubicBezierSegment
+                    Point1="107.166666666667,26.2727272727273"
+                    Point2="111.166666666667,26.2727272727273"
+                    Point3="111.166666666667,30.2727272727273" />
+                  <mssgle:LineSegment
+                    End="111.166666666667,45.0454545454546" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="7.39194661458335,31.2727272727273,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Create Employee CSV\Sort"
+          TopLeft="270,328.333333333333" />
+        <EdgeLayout
+          Id="Package\Create Employee CSV.Paths[Derived Column Output]"
+          TopLeft="285.712121212121,279.272727272727">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="33.2878787878788,49.0606060606059"
+              Start="0,0"
+              End="33.2878787878788,41.5606060606059">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.530303030303" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.530303030303"
+                    Point2="0,24.530303030303"
+                    Point3="4,24.530303030303" />
+                  <mssgle:LineSegment
+                    End="29.2878787878788,24.530303030303" />
+                  <mssgle:CubicBezierSegment
+                    Point1="29.2878787878788,24.530303030303"
+                    Point2="33.2878787878788,24.530303030303"
+                    Point3="33.2878787878788,28.530303030303" />
+                  <mssgle:LineSegment
+                    End="33.2878787878788,41.5606060606059" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="118,42"
+          Id="Package\Create Employee CSV\AW2012"
+          TopLeft="425.833333333333,299.166666666667" />
+        <EdgeLayout
+          Id="Package\Create Employee CSV.Paths[Sort Output]"
+          TopLeft="368,349.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="57.8333333333334,-29.1666666666666"
+              Start="0,0"
+              End="50.3333333333334,-29.1666666666666">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="24.9166666666667,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="24.9166666666667,0"
+                    Point2="28.9166666666667,0"
+                    Point3="28.9166666666667,-4" />
+                  <mssgle:LineSegment
+                    End="28.9166666666667,-25.1666666666666" />
+                  <mssgle:CubicBezierSegment
+                    Point1="28.9166666666667,-25.1666666666666"
+                    Point2="28.9166666666667,-29.1666666666666"
+                    Point3="32.9166666666667,-29.1666666666666" />
+                  <mssgle:LineSegment
+                    End="50.3333333333334,-29.1666666666666" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Create Employee CSV\Oracle Employees">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Create Employee CSV\Lookup DepartmentName">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">"HR"."DEPARTMENTS"</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Create Employee CSV\AW2012">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
