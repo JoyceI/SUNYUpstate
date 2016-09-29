@@ -52,10 +52,16 @@ namespace ReadOracleWriteExcel
            }
            sw.Close();
            sw2.Close();
+           dr = cmd.ExecuteReader();
+           DRtoExcel writer = new DRtoExcel(@"C:\Lab\Sample.xlsx");
+           string filename = writer.WriteDR(dr);
+           Console.WriteLine(filename + " written");
             }
             //Create OracleCommand
             //OracleCommand ExecuteReader to get OracleDataReaderBack
             //
+            //write Excel
+            
         }
     }
 
