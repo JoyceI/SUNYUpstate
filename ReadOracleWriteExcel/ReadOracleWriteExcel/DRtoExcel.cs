@@ -12,6 +12,7 @@ namespace ReadOracleWriteExcel
 {
     class DRtoExcel
     {
+        public string ReportName { get; set; }
         private FileInfo newFile;
         public DRtoExcel(string fileName)
         {
@@ -33,7 +34,7 @@ namespace ReadOracleWriteExcel
                 {
                     const int startRow = 5;
                     int row = startRow;
-                    worksheet.Cells["A1"].Value = "Employee Report.";
+                    worksheet.Cells["A1"].Value = ReportName;
                     for (int i = 0; i < dr.VisibleFieldCount; i++)
                     {
                         string cell = ((char)(65+i)).ToString()+"4";
@@ -70,6 +71,10 @@ namespace ReadOracleWriteExcel
         {
             var cmd = conn.CreateCommand();
             cmd.CommandText = query;
+            if (conn.State == System.Data.ConnectionState.Closed)
+            {
+                conn.Open();
+            }
             return WriteDR(cmd.ExecuteReader());
         }
     }

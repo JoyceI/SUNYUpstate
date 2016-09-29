@@ -73,10 +73,12 @@ namespace ReadOracleWriteExcel
            //DRtoExcel empReport = new DRtoExcel(@"C:\Lab\emp.xlsx");
            //empReport.WriteDR(empCmd.ExecuteReader());
            DRtoExcel regionWriter = new DRtoExcel(@"C:\Lab\Region.xlsx");
-           regionWriter.WriteDR(conn, "Select * from regions");
+           regionWriter.ReportName = "Emp Region Report";
+           regionWriter.WriteDR(conn, "Select * from hr.regions");
 
            DRtoExcel JobWriter = new DRtoExcel(@"C:\Lab\Jobs.xlsx");
-           JobWriter.WriteDR(conn, "Select * from Hr.Jobs");
+           JobWriter.ReportName = "Jobs Report";
+           JobWriter.WriteDR(conn, "Select job_title as \"Title\" from Hr.Jobs");
             
             }
             
