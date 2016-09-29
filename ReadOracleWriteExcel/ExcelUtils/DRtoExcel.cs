@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ReadOracleWriteExcel
+namespace ExcelUtils
 {
-    class DRtoExcel
+    public class DRtoExcel
     {
         public string ReportName { get; set; }
         private FileInfo newFile;
