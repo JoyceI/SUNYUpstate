@@ -31,8 +31,33 @@ namespace ReadOracleWriteExcel
            sb.AppendLine("on A.Department_ID =B.Department_ID");
 
            OracleCommand cmd = new OracleCommand(sb.ToString(), conn);
-           conn.Open();
-           OracleDataReader dr = cmd.ExecuteReader();
+           OracleDataReader dr;
+           try
+           {
+               conn.Open();
+               dr = cmd.ExecuteReader();
+           }
+           catch (OracleException e)
+           {
+
+               Console.WriteLine(
+                   "An Oracle exception has occurred. Program will now close");
+               switch (e.Number)
+               {
+                   case 942:
+                       Console.WriteLine("Table not found");
+                       break;
+                   case 1017:
+                       Console.WriteLine("Login Failed");
+                       break;
+                   default:
+                       Console.WriteLine("Not sure, but something went wrong");
+                       break;
+               }
+               
+           }
+        
+          
            StreamWriter sw = new StreamWriter(@"C:\Lab\Temp.csv");
            StreamWriter sw2 = new StreamWriter(@"C:\Lab\FixedWidth.csv");
            string header = string.Format("{0,30}{1,30}{2,30}", dr.GetName(0),
