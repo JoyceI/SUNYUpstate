@@ -3,6 +3,7 @@ using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -14,15 +15,24 @@ namespace ReadOracleWriteExcel
     {
         static void Main(string[] args)
         {
+            Trace.AutoFlush = true;
+            Trace.Listeners.Add(new TextWriterTraceListener(@"c:\Lab\Trace.txt"));
+            //Trace.Listeners.Add(new EventLogTraceListener(new EventLog("Application")));
+            Trace.TraceInformation("ReadOracle Program Starting");
+            
             //step one go nuget odp.net,epplus
             string connstr = 
                 "data source=localhost:1521/xe;user id={0};password={1}";
+            
             Console.WriteLine("Oracle Username?");
             string userName = Console.ReadLine();
             Console.WriteLine("Oracle Password?");
             string password = Console.ReadLine();
+
             connstr=string.Format(connstr, userName, password);
+            Trace.TraceInformation("Using connection string {0}", connstr);
             //Create OracleConnection
+            
             using (OracleConnection conn = new OracleConnection(connstr))
             { 
                 StringBuilder sb = new StringBuilder();
@@ -31,7 +41,7 @@ namespace ReadOracleWriteExcel
            sb.AppendLine("on A.Department_ID =B.Department_ID");
 
            OracleCommand cmd = new OracleCommand(sb.ToString(), conn);
-           OracleDataReader dr;
+           OracleDataReader dr=null;
            try
            {
                conn.Open();
@@ -39,13 +49,13 @@ namespace ReadOracleWriteExcel
            }
            catch (OracleException e)
            {
-
                Console.WriteLine(
                    "An Oracle exception has occurred. Program will now close");
                switch (e.Number)
                {
                    case 942:
                        Console.WriteLine("Table not found");
+                       Trace.TraceError("User specified a bad query: {0}",sb.ToString());
                        break;
                    case 1017:
                        Console.WriteLine("Login Failed");
@@ -54,13 +64,14 @@ namespace ReadOracleWriteExcel
                        Console.WriteLine("Not sure, but something went wrong");
                        break;
                }
-               
+               return;
            }
         
           
            StreamWriter sw = new StreamWriter(@"C:\Lab\Temp.csv");
            StreamWriter sw2 = new StreamWriter(@"C:\Lab\FixedWidth.csv");
-           string header = string.Format("{0,30}{1,30}{2,30}", dr.GetName(0),
+           string header = string.Format("{0,30}{1,30}{2,30}", 
+              dr.GetName(0),
               dr.GetName(1),
               dr.GetName(2));
            sw2.WriteLine(header);
