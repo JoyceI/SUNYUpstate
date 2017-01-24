@@ -25,6 +25,7 @@ namespace LinqFun
             };
             foreach (CoffeeMug mug in SBuxShelf.Where(m=> m.Volume>30.0f))
             {
+                
                 Console.WriteLine(mug.Owner);
                 Console.WriteLine(mug);
             }

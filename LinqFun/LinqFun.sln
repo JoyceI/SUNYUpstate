@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqFun", "LinqFun\LinqFun.csproj", "{E323E940-307A-4ABC-BCDD-C0C09D612C56}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamDemo", "StreamDemo\StreamDemo.csproj", "{BBB711EB-65B6-490E-BEEF-813AB5355B8B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E323E940-307A-4ABC-BCDD-C0C09D612C56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E323E940-307A-4ABC-BCDD-C0C09D612C56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E323E940-307A-4ABC-BCDD-C0C09D612C56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBB711EB-65B6-490E-BEEF-813AB5355B8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBB711EB-65B6-490E-BEEF-813AB5355B8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBB711EB-65B6-490E-BEEF-813AB5355B8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBB711EB-65B6-490E-BEEF-813AB5355B8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
