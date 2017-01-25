@@ -14,12 +14,10 @@ namespace ReportTool
         {
             string report = "/SUNY Practice/CustomerList";
             string format = "PDF";
-            ReportExecutionServiceSoapClient
-                proxy = new ReportExecutionServiceSoapClient();
-
-         
             string fileOut = @"C:\Lab\test.pdf";
+            
             WebClient client = new WebClient();
+            
             string url = string.Format("http://ssrs.objectmage.com/reportserver?{0}&rs:format={1}",
                 report,
                 format);
