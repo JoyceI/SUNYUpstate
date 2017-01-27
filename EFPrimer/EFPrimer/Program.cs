@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace EFPrimer
 {
+
     class Rec
     {
         public string A { get; set; }
@@ -16,16 +18,16 @@ namespace EFPrimer
         static void Main(string[] args)
         {
             HR db = new HR();
-           
-
-            db.Database.Log = s => Console.WriteLine(s);
+            db.Database.Log = s => {
+                Console.WriteLine(s);
+                //File.AppendText("log.txt").WriteLine(s);
+            };
             //
             //
             //Sales
             //    bob,tom,John
             //Admin
             //    David, Jay, ....
-         
             var result = db.Database.SqlQuery<Rec>(
                 "select d.department_name as A, listagg(e.first_name,',') WITHIN GROUP (ORDER BY first_name) as B from departments d join employees e using (department_ID) Group by Department_Name"
                 );
@@ -44,6 +46,7 @@ namespace EFPrimer
                     
             foreach (var item in q.ToList())
             {
+
                 Console.WriteLine(item.DEPARTMENT_NAME);
                 Console.WriteLine(string.Join(",",item.EMPLOYEES.Select(e=>e.FIRST_NAME)));
                 Console.WriteLine("---------------");
